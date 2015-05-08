@@ -23,6 +23,7 @@ class TreeNodePair {
 	head = h; tail = t;
     }
 }
+
 public class Solution {
     public TreeNode bst2DoubleLinkedList(TreeNode root) {
 	if (root == null)  return root;
