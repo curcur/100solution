@@ -1,4 +1,15 @@
 /**
+ * ----------------------------------------------------------------------------
+   Binary Tree Serialization (lintcode)
+    - Design an algorithm and write code to serialize and deserialize a binary 
+      tree
+    - Writing the tree to￼a file is called ``serialization''
+    - Reading back from the file to reconstruct the exact same binary tree is 
+      ``deserialization''
+ * ----------------------------------------------------------------------------
+ */
+
+/**
  * Definition of TreeNode:
  * public class TreeNode {
  *     public int val;
