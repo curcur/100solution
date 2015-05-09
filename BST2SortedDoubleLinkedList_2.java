@@ -50,7 +50,6 @@ public class Solution {
 	    leftp.tail.right = root;
 	    root.left = leftp.tail;
 	}
-
 	if (root.right == null)
 	    tail = root;
 	else {
