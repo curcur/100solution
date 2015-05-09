@@ -12,6 +12,16 @@
  */
 
 /**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+/**
  * - Inorder Traversal of BST is of sorted order
  * - We can have the recursive function return two values:
  *   - The first node & last node given the root
