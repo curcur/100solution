@@ -22,7 +22,6 @@
  */
 
 /**
- * - Inorder Traversal of BST is of sorted order
  * - We can have the recursive function return two values:
  *   - The first node & last node given the root
  */
@@ -59,5 +58,34 @@ public class Solution {
 	    root.right = rightp.head;
 	}
 	return new TreeNodePair(head, tail);
+    }
+}
+
+
+/**
+ * - Inorder Traversal of BST is of sorted order
+ *   - Use a prev pointer to record the prev node
+ */
+public class Solution {
+    public TreeNode bst2DoubleLinkedList(TreeNode root) {
+	Stack<TreeNode> stack = new Stack<>();
+	TreeNode curr = root, head = null, prev = null;
+	
+	while(curr!=null || !stack.isEmpty()) {
+	    if(curr!=null) {
+		stack.push(curr);
+		curr = curr.left;
+		continue;
+	    }
+	    curr = stack.pop();
+	    if (head == null)  
+		head = curr;
+	    if (prev != null)
+		prev.right = curr;
+	    curr.left = prev;
+	    prev = curr;
+	    curr = curr.right;
+	}
+	return head;
     }
 }
